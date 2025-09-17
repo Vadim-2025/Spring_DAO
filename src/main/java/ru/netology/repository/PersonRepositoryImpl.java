@@ -19,11 +19,6 @@ public class PersonRepositoryImpl implements PersonRepository {
         return em.createNamedQuery("Persons.findByCity", PersonEntity.class).setParameter("city", city).getResultList();
     }
 
-    public List<PersonEntity> getPersonsByCityNativeQuery(String city) {
-        String sql = "SELECT * FROM netology.persons WHERE city_of_living ~* '" + city + "'";
-        return em.createNativeQuery(sql, PersonEntity.class).getResultList();
-    }
-
     @Override
     public void detachPerson(PersonEntity entity) {
 

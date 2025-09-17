@@ -12,8 +12,8 @@ public class Mapper {
         return Person.builder().name(entity.getPersonProfile().getName())
                 .surname(entity.getPersonProfile().getSurname())
                 .age(entity.getPersonProfile().getAge())
-                .phone_number(entity.getPhone_number())
-                .city_of_living(entity.getCity_of_living())
+                .phoneNumber(entity.getPhoneNumber())
+                .cityOfLiving(entity.getCityOfLiving())
                 .build();
     }
 
@@ -23,8 +23,8 @@ public class Mapper {
                         .surname(person.getSurname())
                         .age(person.getAge())
                         .build())
-                .phone_number(person.getPhone_number())
-                .city_of_living(person.getCity_of_living())
+                .phoneNumber(person.getPhoneNumber())
+                .cityOfLiving(person.getCityOfLiving())
                 .build();
     }
 }
